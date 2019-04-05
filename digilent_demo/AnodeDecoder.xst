@@ -1,0 +1,5 @@
+set -tmpdir "Z:/Support/CR-II_ISE_Demo/Source/xst/projnav.tmp"
+set -xsthdpdir "Z:/Support/CR-II_ISE_Demo/Source/xst"
+elaborate
+-ifn AnodeDecoder.prj
+-ifmt mixed

@@ -1,0 +1,26 @@
+NET 	"CLK"			LOC = "P38"; #PCLK
+
+NET	"LD<0>"		LOC = "P69"; #LD0
+NET	"LD<1>"		LOC = "P68"; #LD1
+NET	"LD<2>"		LOC = "P66"; #LD2
+NET	"LD<3>"		LOC = "P64"; #LD3
+
+NET 	"BTN<0>" 	LOC = "P143"; #BTN0
+NET 	"BTN<1>" 	LOC = "P94"; #BTN1
+
+NET	"SW<0>"		LOC = "P39";	#SW0
+NET	"SW<1>"		LOC = "P124";	#SW1
+
+NET	"CAT<0>"		LOC = "P56";
+NET	"CAT<1>"		LOC = "P53";
+NET	"CAT<2>"		LOC = "P60";
+NET	"CAT<3>"		LOC = "P58";
+NET	"CAT<4>"		LOC = "P57";
+NET	"CAT<5>"		LOC = "P54";
+NET	"CAT<6>"		LOC = "P61";
+NET	"CAT<7>"		LOC = "P59";
+
+NET	"ANO<3>"		LOC = "P130";
+NET	"ANO<2>"		LOC = "P129";
+NET	"ANO<1>"		LOC = "P128";
+NET	"ANO<0>"		LOC = "P126";

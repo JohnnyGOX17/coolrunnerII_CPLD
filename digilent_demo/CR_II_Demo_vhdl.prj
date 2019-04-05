@@ -1,0 +1,8 @@
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\TwoBitCounter.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\SevenSegmentDecoder.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\MUX_Bus4to1.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\LED4Dec1HexDriver.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\AnodeDecoder.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\Timer_Block.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\clk_div.vhd"
+vhdl work "\\ro-clj-fs1\rnd\Support\CR-II_ISE_Demo\Source\CR_II_Demo.vhd"

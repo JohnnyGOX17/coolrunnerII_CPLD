@@ -1,0 +1,366 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Reading design: CR_II_Demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CR_II_Demo.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CR_II_Demo"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : CR_II_Demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/CR_II_Demo is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd".
+WARNING:HDLParsers:3607 - Unit work/CR_II_Demo/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd".
+WARNING:HDLParsers:3607 - Unit work/clk_div is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/clk_div.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd".
+WARNING:HDLParsers:3607 - Unit work/clk_div/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/clk_div.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd".
+WARNING:HDLParsers:3607 - Unit work/Timer_Block is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd".
+WARNING:HDLParsers:3607 - Unit work/Timer_Block/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd".
+WARNING:HDLParsers:3607 - Unit work/AnodeDecoder is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd".
+WARNING:HDLParsers:3607 - Unit work/AnodeDecoder/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd".
+WARNING:HDLParsers:3607 - Unit work/LED4Dec1HexDriver is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd".
+WARNING:HDLParsers:3607 - Unit work/LED4Dec1HexDriver/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd".
+WARNING:HDLParsers:3607 - Unit work/MUX_Bus4to1 is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd".
+WARNING:HDLParsers:3607 - Unit work/MUX_Bus4to1/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd".
+WARNING:HDLParsers:3607 - Unit work/SevenSegmentDecoder is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd".
+WARNING:HDLParsers:3607 - Unit work/SevenSegmentDecoder/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd".
+WARNING:HDLParsers:3607 - Unit work/TwoBitCounter is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd".
+WARNING:HDLParsers:3607 - Unit work/TwoBitCounter/Behavioral is now defined in a different file.  It was defined in "//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd", and is now defined in "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd".
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd" in Library work.
+Architecture behavioral of Entity led4dec1hexdriver is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd" in Library work.
+Architecture behavioral of Entity mux_bus4to1 is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd" in Library work.
+Architecture behavioral of Entity twobitcounter is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd" in Library work.
+Architecture behavioral of Entity anodedecoder is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd" in Library work.
+Architecture behavioral of Entity sevensegmentdecoder is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd" in Library work.
+Architecture behavioral of Entity clk_div is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd" in Library work.
+Architecture behavioral of Entity timer_block is up to date.
+Compiling vhdl file "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd" in Library work.
+Architecture behavioral of Entity cr_ii_demo is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CR_II_Demo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clk_div> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Timer_Block> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <LED4Dec1HexDriver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MUX_Bus4to1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TwoBitCounter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <AnodeDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SevenSegmentDecoder> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CR_II_Demo> in library <work> (Architecture <behavioral>).
+Entity <CR_II_Demo> analyzed. Unit <CR_II_Demo> generated.
+
+Analyzing Entity <clk_div> in library <work> (Architecture <behavioral>).
+Entity <clk_div> analyzed. Unit <clk_div> generated.
+
+Analyzing Entity <Timer_Block> in library <work> (Architecture <behavioral>).
+Entity <Timer_Block> analyzed. Unit <Timer_Block> generated.
+
+Analyzing Entity <LED4Dec1HexDriver> in library <work> (Architecture <behavioral>).
+Entity <LED4Dec1HexDriver> analyzed. Unit <LED4Dec1HexDriver> generated.
+
+Analyzing Entity <MUX_Bus4to1> in library <work> (Architecture <behavioral>).
+Entity <MUX_Bus4to1> analyzed. Unit <MUX_Bus4to1> generated.
+
+Analyzing Entity <TwoBitCounter> in library <work> (Architecture <behavioral>).
+Entity <TwoBitCounter> analyzed. Unit <TwoBitCounter> generated.
+
+Analyzing Entity <AnodeDecoder> in library <work> (Architecture <behavioral>).
+Entity <AnodeDecoder> analyzed. Unit <AnodeDecoder> generated.
+
+Analyzing Entity <SevenSegmentDecoder> in library <work> (Architecture <behavioral>).
+Entity <SevenSegmentDecoder> analyzed. Unit <SevenSegmentDecoder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk_div>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd".
+    Found 20-bit up counter for signal <base_count>.
+    Found 1-bit register for signal <base_out>.
+    Found 20-bit comparator less for signal <base_out$cmp_lt0000> created at line 71.
+    Found 14-bit up counter for signal <disp_count>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clk_div> synthesized.
+
+
+Synthesizing Unit <LED4Dec1HexDriver>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd".
+WARNING:Xst:646 - Signal <TC_THOU> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit up counter for signal <HUN_SIGNAL>.
+    Found 4-bit up counter for signal <ONE_SIGNAL>.
+    Found 1-bit register for signal <TC_HUNS>.
+    Found 1-bit register for signal <TC_ONES>.
+    Found 1-bit register for signal <TC_TENS>.
+    Found 4-bit up counter for signal <TEN_SIGNAL>.
+    Found 4-bit up counter for signal <THO_SIGNAL>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <LED4Dec1HexDriver> synthesized.
+
+
+Synthesizing Unit <MUX_Bus4to1>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <Q>.
+Unit <MUX_Bus4to1> synthesized.
+
+
+Synthesizing Unit <TwoBitCounter>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd".
+    Found 2-bit up counter for signal <Q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <TwoBitCounter> synthesized.
+
+
+Synthesizing Unit <AnodeDecoder>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd".
+    Found 1-of-4 decoder for signal <A>.
+    Summary:
+	inferred   1 Decoder(s).
+Unit <AnodeDecoder> synthesized.
+
+
+Synthesizing Unit <SevenSegmentDecoder>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd".
+    Found 16x7-bit ROM for signal <C>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SevenSegmentDecoder> synthesized.
+
+
+Synthesizing Unit <Timer_Block>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd".
+Unit <Timer_Block> synthesized.
+
+
+Synthesizing Unit <CR_II_Demo>.
+    Related source file is "//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd".
+    Found 4x2-bit ROM for signal <SW$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <CR_II_Demo> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x2-bit ROM                                           : 1
+# Counters                                             : 7
+ 14-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 4
+ 1-bit register                                        : 4
+# Comparators                                          : 1
+ 20-bit comparator less                                : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x2-bit ROM                                           : 1
+# Counters                                             : 7
+ 14-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CR_II_Demo> ...
+
+Optimizing unit <SevenSegmentDecoder> ...
+
+Optimizing unit <MUX_Bus4to1> ...
+
+Optimizing unit <AnodeDecoder> ...
+
+Optimizing unit <clk_div> ...
+  implementation constraint: INIT=r	 : base_out
+
+Optimizing unit <LED4Dec1HexDriver> ...
+
+Optimizing unit <TwoBitCounter> ...
+
+Optimizing unit <Timer_Block> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CR_II_Demo.ngr
+Top Level Output File Name         : CR_II_Demo
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 434
+#      AND2                        : 153
+#      AND3                        : 4
+#      AND4                        : 8
+#      AND8                        : 1
+#      GND                         : 2
+#      INV                         : 155
+#      OR2                         : 64
+#      OR3                         : 2
+#      XOR2                        : 45
+# FlipFlops/Latches                : 56
+#      FDC                         : 36
+#      FDCE                        : 20
+# IO Buffers                       : 21
+#      IBUF                        : 5
+#      OBUF                        : 16
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.79 secs
+ 
+--> 
+
+Total memory usage is 254452 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

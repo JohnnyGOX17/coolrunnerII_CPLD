@@ -1,0 +1,800 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+ANO(0) <= NOT ((NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ANO(1) <= NOT ((NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ANO(2) <= NOT ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ANO(3) <= NOT ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(0) <= ((N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(1) <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(2) AND NOT N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(2) AND NOT N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(2) AND NOT N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(2) AND NOT N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(2) AND NOT Inst_Timer_Block/S_HUNS(3) AND NOT N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(2) AND NOT Inst_Timer_Block/S_TENS(3) AND NOT N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(2) <= CAT(2)_BUFR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(2)_BUFR <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(2) AND Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(2) AND Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(2) AND Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(2) AND Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(2) AND Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(2) AND Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(2) AND Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(2) AND Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(3) <= ((N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(4) <= ((N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(5) <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(2) AND NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(2) AND NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(2) AND NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(2) AND NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(2) AND NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(2) AND NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(6) <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(2) AND NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(2) AND NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(2) AND NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CAT(7) <= NOT ((NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0)));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_2BIT0: FTCPE port map (Inst_Timer_Block/S_2BIT(0),'0',s_disp,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_2BIT1: FTCPE port map (Inst_Timer_Block/S_2BIT(1),Inst_Timer_Block/S_2BIT(0),s_disp,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_HUNS0: FTCPE port map (Inst_Timer_Block/S_HUNS(0),Inst_Timer_Block/S_HUNS_T(0),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_HUNS_T(0) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS);
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_HUNS1: FTCPE port map (Inst_Timer_Block/S_HUNS(1),Inst_Timer_Block/S_HUNS_T(1),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_HUNS_T(1) <= ((BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3)));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_HUNS2: FTCPE port map (Inst_Timer_Block/S_HUNS(2),Inst_Timer_Block/S_HUNS_T(2),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_HUNS_T(2) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_HUNS3: FTCPE port map (Inst_Timer_Block/S_HUNS(3),Inst_Timer_Block/S_HUNS_T(3),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_HUNS_T(3) <= ((BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3)));
+</td></tr><tr><td>
+FDCPE_Inst_Timer_Block/S_ONES0: FDCPE port map (Inst_Timer_Block/S_ONES(0),BTN(1),LD(3),NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_ONES1: FTCPE port map (Inst_Timer_Block/S_ONES(1),Inst_Timer_Block/S_ONES_T(1),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_ONES_T(1) <= (BTN(1) AND Inst_Timer_Block/S_ONES(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (BTN(1) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_ONES2: FTCPE port map (Inst_Timer_Block/S_ONES(2),Inst_Timer_Block/S_ONES_T(2),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_ONES_T(2) <= (BTN(1) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_ONES3: FTCPE port map (Inst_Timer_Block/S_ONES(3),Inst_Timer_Block/S_ONES_T(3),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_ONES_T(3) <= ((BTN(1) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_TENS0: FTCPE port map (Inst_Timer_Block/S_TENS(0),Inst_Timer_Block/S_TENS_T(0),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_TENS_T(0) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES);
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_TENS1: FTCPE port map (Inst_Timer_Block/S_TENS(1),Inst_Timer_Block/S_TENS_T(1),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_TENS_T(1) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(0) AND NOT Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND Inst_Timer_Block/S_TENS(3));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_TENS2: FTCPE port map (Inst_Timer_Block/S_TENS(2),Inst_Timer_Block/S_TENS_T(2),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_TENS_T(2) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(0) AND Inst_Timer_Block/S_TENS(1));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_TENS3: FTCPE port map (Inst_Timer_Block/S_TENS(3),Inst_Timer_Block/S_TENS_T(3),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_TENS_T(3) <= ((BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(0) AND Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_TENS(0) AND NOT Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND Inst_Timer_Block/S_TENS(3)));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_THOU0: FTCPE port map (Inst_Timer_Block/S_THOU(0),Inst_Timer_Block/S_THOU_T(0),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_THOU_T(0) <= (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND Inst_Timer_Block/T0/TC_HUNS);
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_THOU1: FTCPE port map (Inst_Timer_Block/S_THOU(1),Inst_Timer_Block/S_THOU_T(1),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_THOU_T(1) <= ((Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND Inst_Timer_Block/S_THOU(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND Inst_Timer_Block/S_THOU(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND NOT Inst_Timer_Block/S_THOU(3)));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_THOU2: FTCPE port map (Inst_Timer_Block/S_THOU(2),Inst_Timer_Block/S_THOU_T(2),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_THOU_T(2) <= (Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND Inst_Timer_Block/S_THOU(1));
+</td></tr><tr><td>
+FTCPE_Inst_Timer_Block/S_THOU3: FTCPE port map (Inst_Timer_Block/S_THOU(3),Inst_Timer_Block/S_THOU_T(3),LD(3),NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/S_THOU_T(3) <= ((Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND Inst_Timer_Block/S_THOU(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_THOU(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/S_THOU(0) AND BTN(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_ONES AND Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS AND NOT Inst_Timer_Block/S_THOU(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(2) AND Inst_Timer_Block/S_THOU(3)));
+</td></tr><tr><td>
+FDCPE_Inst_Timer_Block/T0/TC_HUNS: FDCPE port map (Inst_Timer_Block/T0/TC_HUNS,Inst_Timer_Block/T0/TC_HUNS_D,LD(3),'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/T0/TC_HUNS_D <= ((NOT BTN(1) AND Inst_Timer_Block/T0/TC_HUNS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BTN(0) AND Inst_Timer_Block/T0/TC_HUNS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/T0/TC_TENS AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_HUNS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND BTN(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND NOT Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_HUNS(3)));
+</td></tr><tr><td>
+FDCPE_Inst_Timer_Block/T0/TC_ONES: FDCPE port map (Inst_Timer_Block/T0/TC_ONES,Inst_Timer_Block/T0/TC_ONES_D,LD(3),'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/T0/TC_ONES_D <= ((NOT BTN(1) AND Inst_Timer_Block/T0/TC_ONES)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_Timer_Block/T0/TC_ONES AND NOT BTN(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND BTN(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND NOT Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+FDCPE_Inst_Timer_Block/T0/TC_TENS: FDCPE port map (Inst_Timer_Block/T0/TC_TENS,Inst_Timer_Block/T0/TC_TENS_D,LD(3),'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_Timer_Block/T0/TC_TENS_D <= ((NOT BTN(1) AND Inst_Timer_Block/T0/TC_TENS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/T0/TC_ONES AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/T0/TC_TENS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BTN(0) AND Inst_Timer_Block/T0/TC_TENS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(1) AND Inst_Timer_Block/T0/TC_ONES AND BTN(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(0) AND NOT Inst_Timer_Block/S_TENS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(2) AND Inst_Timer_Block/S_TENS(3)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count0: FTCPE port map (Inst_clk_div/base_count(0),'0',CLK,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count1: FTCPE port map (Inst_clk_div/base_count(1),Inst_clk_div/base_count(0),CLK,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count2: FTCPE port map (Inst_clk_div/base_count(2),Inst_clk_div/base_count_T(2),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(2) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count3: FTCPE port map (Inst_clk_div/base_count(3),Inst_clk_div/base_count_T(3),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(3) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count4: FTCPE port map (Inst_clk_div/base_count(4),Inst_clk_div/base_count_T(4),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(4) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(3));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count5: FTCPE port map (Inst_clk_div/base_count(5),Inst_clk_div/base_count_T(5),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(5) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(3) AND Inst_clk_div/base_count(4));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count6: FTCPE port map (Inst_clk_div/base_count(6),Inst_clk_div/base_count_T(6),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(6) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(3) AND Inst_clk_div/base_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(5));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count7: FTCPE port map (Inst_clk_div/base_count(7),Inst_clk_div/base_count_T(7),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(7) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(3) AND Inst_clk_div/base_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(5) AND Inst_clk_div/base_count(6));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count8: FTCPE port map (Inst_clk_div/base_count(8),Inst_clk_div/base_count_T(8),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(8) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND NOT N_PZ_446);
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count9: FTCPE port map (Inst_clk_div/base_count(9),Inst_clk_div/base_count_T(9),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(9) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count10: FTCPE port map (Inst_clk_div/base_count(10),Inst_clk_div/base_count_T(10),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(10) <= ((Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND N_PZ_446)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(9)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count11: FTCPE port map (Inst_clk_div/base_count(11),Inst_clk_div/base_count_T(11),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(11) <= (Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(10) AND Inst_clk_div/base_count(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(1) AND Inst_clk_div/base_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(3) AND Inst_clk_div/base_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(5) AND Inst_clk_div/base_count(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(8) AND Inst_clk_div/base_count(9));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count12: FTCPE port map (Inst_clk_div/base_count(12),Inst_clk_div/base_count_T(12),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(12) <= ((Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND N_PZ_446)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(9)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count13: FTCPE port map (Inst_clk_div/base_count(13),Inst_clk_div/base_count_T(13),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(13) <= ((Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND N_PZ_446)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count14: FTCPE port map (Inst_clk_div/base_count(14),Inst_clk_div/base_count_T(14),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(14) <= (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count15: FTCPE port map (Inst_clk_div/base_count(15),Inst_clk_div/base_count_T(15),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(15) <= (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND Inst_clk_div/base_count(14));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count16: FTCPE port map (Inst_clk_div/base_count(16),Inst_clk_div/base_count_T(16),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(16) <= (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(15));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count17: FTCPE port map (Inst_clk_div/base_count(17),Inst_clk_div/base_count_T(17),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(17) <= (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(15) AND Inst_clk_div/base_count(16));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count18: FTCPE port map (Inst_clk_div/base_count(18),Inst_clk_div/base_count_T(18),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(18) <= ((Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND N_PZ_446)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(15) AND Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(17)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/base_count19: FTCPE port map (Inst_clk_div/base_count(19),Inst_clk_div/base_count_T(19),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/base_count_T(19) <= ((Inst_clk_div/base_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND N_PZ_446)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(0) AND Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(7) AND Inst_clk_div/base_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(2) AND Inst_clk_div/base_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(4) AND Inst_clk_div/base_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(6) AND Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(15) AND Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(17) AND Inst_clk_div/base_count(18)));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count0: FTCPE port map (Inst_clk_div/disp_count(0),'0',CLK,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count1: FTCPE port map (Inst_clk_div/disp_count(1),Inst_clk_div/disp_count(0),CLK,NOT BTN<0>,'0','1');
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count2: FTCPE port map (Inst_clk_div/disp_count(2),Inst_clk_div/disp_count_T(2),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(2) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count3: FTCPE port map (Inst_clk_div/disp_count(3),Inst_clk_div/disp_count_T(3),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(3) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count4: FTCPE port map (Inst_clk_div/disp_count(4),Inst_clk_div/disp_count_T(4),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(4) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count5: FTCPE port map (Inst_clk_div/disp_count(5),Inst_clk_div/disp_count_T(5),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(5) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count6: FTCPE port map (Inst_clk_div/disp_count(6),Inst_clk_div/disp_count_T(6),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(6) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(5));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count7: FTCPE port map (Inst_clk_div/disp_count(7),Inst_clk_div/disp_count_T(7),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(7) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(5) AND Inst_clk_div/disp_count(6));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count8: FTCPE port map (Inst_clk_div/disp_count(8),Inst_clk_div/disp_count_T(8),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(8) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(5) AND Inst_clk_div/disp_count(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(7));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count9: FTCPE port map (Inst_clk_div/disp_count(9),Inst_clk_div/disp_count_T(9),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(9) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(5) AND Inst_clk_div/disp_count(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(7) AND Inst_clk_div/disp_count(8));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count10: FTCPE port map (Inst_clk_div/disp_count(10),Inst_clk_div/disp_count_T(10),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(10) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(1) AND Inst_clk_div/disp_count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(3) AND Inst_clk_div/disp_count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(5) AND Inst_clk_div/disp_count(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(7) AND Inst_clk_div/disp_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(9));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count11: FTCPE port map (Inst_clk_div/disp_count(11),Inst_clk_div/disp_count_T(11),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(11) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(10) AND Inst_clk_div/disp_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(2) AND Inst_clk_div/disp_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(4) AND Inst_clk_div/disp_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(6) AND Inst_clk_div/disp_count(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(8) AND Inst_clk_div/disp_count(9));
+</td></tr><tr><td>
+FTCPE_Inst_clk_div/disp_count12: FTCPE port map (Inst_clk_div/disp_count(12),Inst_clk_div/disp_count_T(12),CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inst_clk_div/disp_count_T(12) <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(10) AND Inst_clk_div/disp_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(2) AND Inst_clk_div/disp_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(4) AND Inst_clk_div/disp_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(6) AND Inst_clk_div/disp_count(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(8) AND Inst_clk_div/disp_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(11));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LD(0) <= NOT ((NOT SW(1) AND SW(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LD(1) <= NOT ((SW(1) AND NOT SW(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LD(2) <= NOT ((SW(1) AND SW(0)));
+</td></tr><tr><td>
+FDCPE_LD3: FDCPE port map (LD(3),LD_D(3),CLK,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LD_D(3) <= NOT (((NOT BTN(0) AND NOT LD(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(13) AND NOT Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(15) AND NOT Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(13) AND NOT Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(15) AND NOT Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(9) AND NOT Inst_clk_div/base_count(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(14) AND NOT Inst_clk_div/base_count(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(16) AND NOT Inst_clk_div/base_count(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BTN(0) AND NOT Inst_clk_div/base_count(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(7) AND NOT Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(13) AND NOT Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(15) AND NOT Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(19))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_446 <= (NOT Inst_clk_div/base_count(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(10) AND NOT Inst_clk_div/base_count(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(12) AND NOT Inst_clk_div/base_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(13) AND NOT Inst_clk_div/base_count(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(15) AND NOT Inst_clk_div/base_count(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_clk_div/base_count(17) AND Inst_clk_div/base_count(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/base_count(19));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_466 <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_THOU(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(1) AND Inst_Timer_Block/S_THOU(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_THOU(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_ONES(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(1) AND Inst_Timer_Block/S_ONES(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_ONES(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_467 <= ((Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_HUNS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(1) AND Inst_Timer_Block/S_HUNS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_HUNS(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Inst_Timer_Block/S_2BIT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_Timer_Block/S_2BIT(0) AND NOT Inst_Timer_Block/S_TENS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(1) AND Inst_Timer_Block/S_TENS(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Inst_Timer_Block/S_TENS(3)));
+</td></tr><tr><td>
+FTCPE_s_disp: FTCPE port map (s_disp,s_disp_T,CLK,NOT BTN<0>,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s_disp_T <= (Inst_clk_div/disp_count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(10) AND Inst_clk_div/disp_count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(2) AND Inst_clk_div/disp_count(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(4) AND Inst_clk_div/disp_count(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(6) AND Inst_clk_div/disp_count(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(8) AND Inst_clk_div/disp_count(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Inst_clk_div/disp_count(11) AND Inst_clk_div/disp_count(12));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

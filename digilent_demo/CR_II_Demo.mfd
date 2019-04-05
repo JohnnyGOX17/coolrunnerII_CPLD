@@ -1,0 +1,1366 @@
+MDF Database:  version 1.0
+MDF_INFO | CR_II_Demo | XC2C256-7-TQ144
+MACROCELL | 10 | 12 | ANO<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>
+INPUTMC | 2 | 3 | 9 | 3 | 10
+EQ | 2 | 
+   !ANO<0> = !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 3 | 9 | Inst_Timer_Block/S_2BIT<1>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 14 | 10 | 12 | 10 | 13 | 10 | 14 | 10 | 15 | 1 | 10 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15 | 15 | 5
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<0>  | s_disp
+INPUTMC | 2 | 3 | 10 | 3 | 15
+EQ | 3 | 
+   Inst_Timer_Block/S_2BIT<1>.T := Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 1 inp)
+    Inst_Timer_Block/S_2BIT<1>.CLK = s_disp;	// PTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_2BIT<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 3 | 10 | Inst_Timer_Block/S_2BIT<0>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 15 | 3 | 9 | 10 | 12 | 10 | 13 | 10 | 14 | 10 | 15 | 1 | 10 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15 | 15 | 5
+INPUTS | 1 | s_disp
+INPUTMC | 1 | 3 | 15
+EQ | 3 | 
+   !Inst_Timer_Block/S_2BIT<0>.T := Gnd;	// (0 pt, 0 inp)
+    Inst_Timer_Block/S_2BIT<0>.CLK = s_disp;	// PTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_2BIT<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 3 | 15 | s_disp_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 2 | 3 | 10 | 3 | 9
+INPUTS | 13 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<10>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>  | Inst_clk_div/disp_count<8>  | Inst_clk_div/disp_count<9>  | Inst_clk_div/disp_count<11>  | Inst_clk_div/disp_count<12>
+INPUTMC | 13 | 0 | 14 | 2 | 0 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 3 | 12 | 3 | 14
+EQ | 9 | 
+   s_disp.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<10> & Inst_clk_div/disp_count<1> & 
+	Inst_clk_div/disp_count<2> & Inst_clk_div/disp_count<3> & 
+	Inst_clk_div/disp_count<4> & Inst_clk_div/disp_count<5> & 
+	Inst_clk_div/disp_count<6> & Inst_clk_div/disp_count<7> & 
+	Inst_clk_div/disp_count<8> & Inst_clk_div/disp_count<9> & 
+	Inst_clk_div/disp_count<11> & Inst_clk_div/disp_count<12>;	// (1 pt, 13 inp)
+   s_disp.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   s_disp.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 14 | Inst_clk_div/disp_count<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 13 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 0
+EQ | 3 | 
+   !Inst_clk_div/disp_count<0>.T := Gnd;	// (0 pt, 0 inp)
+   Inst_clk_div/disp_count<0>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 0 | Inst_clk_div/disp_count<10>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 3 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 10 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>  | Inst_clk_div/disp_count<8>  | Inst_clk_div/disp_count<9>
+INPUTMC | 10 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1
+EQ | 8 | 
+   Inst_clk_div/disp_count<10>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4> & 
+	Inst_clk_div/disp_count<5> & Inst_clk_div/disp_count<6> & 
+	Inst_clk_div/disp_count<7> & Inst_clk_div/disp_count<8> & 
+	Inst_clk_div/disp_count<9>;	// (1 pt, 10 inp)
+   Inst_clk_div/disp_count<10>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<10>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 7 | Inst_clk_div/disp_count<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 12 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 1 | Inst_clk_div/disp_count<0>
+INPUTMC | 1 | 0 | 14
+EQ | 3 | 
+   Inst_clk_div/disp_count<1>.T := Inst_clk_div/disp_count<0>;	// (1 pt, 1 inp)
+   Inst_clk_div/disp_count<1>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 6 | Inst_clk_div/disp_count<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 11 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 2 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>
+INPUTMC | 2 | 0 | 14 | 2 | 7
+EQ | 4 | 
+   Inst_clk_div/disp_count<2>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1>;	// (1 pt, 2 inp)
+   Inst_clk_div/disp_count<2>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 5 | Inst_clk_div/disp_count<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 10 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 3 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>
+INPUTMC | 3 | 0 | 14 | 2 | 7 | 2 | 6
+EQ | 4 | 
+   Inst_clk_div/disp_count<3>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2>;	// (1 pt, 3 inp)
+   Inst_clk_div/disp_count<3>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 3 | Inst_clk_div/disp_count<4>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 9 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 4 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>
+INPUTMC | 4 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5
+EQ | 5 | 
+   Inst_clk_div/disp_count<4>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3>;	// (1 pt, 4 inp)
+   Inst_clk_div/disp_count<4>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<4>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 15 | Inst_clk_div/disp_count<5>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 8 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 5 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>
+INPUTMC | 5 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3
+EQ | 5 | 
+   Inst_clk_div/disp_count<5>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4>;	// (1 pt, 5 inp)
+   Inst_clk_div/disp_count<5>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<5>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 13 | Inst_clk_div/disp_count<6>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 7 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 6 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>
+INPUTMC | 6 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15
+EQ | 6 | 
+   Inst_clk_div/disp_count<6>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4> & 
+	Inst_clk_div/disp_count<5>;	// (1 pt, 6 inp)
+   Inst_clk_div/disp_count<6>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<6>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 4 | Inst_clk_div/disp_count<7>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 6 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 7 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>
+INPUTMC | 7 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13
+EQ | 6 | 
+   Inst_clk_div/disp_count<7>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4> & 
+	Inst_clk_div/disp_count<5> & Inst_clk_div/disp_count<6>;	// (1 pt, 7 inp)
+   Inst_clk_div/disp_count<7>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<7>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 2 | Inst_clk_div/disp_count<8>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 5 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 8 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>
+INPUTMC | 8 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4
+EQ | 7 | 
+   Inst_clk_div/disp_count<8>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4> & 
+	Inst_clk_div/disp_count<5> & Inst_clk_div/disp_count<6> & 
+	Inst_clk_div/disp_count<7>;	// (1 pt, 8 inp)
+   Inst_clk_div/disp_count<8>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<8>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 1 | Inst_clk_div/disp_count<9>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 4 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 9 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>  | Inst_clk_div/disp_count<8>
+INPUTMC | 9 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2
+EQ | 7 | 
+   Inst_clk_div/disp_count<9>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<1> & Inst_clk_div/disp_count<2> & 
+	Inst_clk_div/disp_count<3> & Inst_clk_div/disp_count<4> & 
+	Inst_clk_div/disp_count<5> & Inst_clk_div/disp_count<6> & 
+	Inst_clk_div/disp_count<7> & Inst_clk_div/disp_count<8>;	// (1 pt, 9 inp)
+   Inst_clk_div/disp_count<9>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<9>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 3 | 12 | Inst_clk_div/disp_count<11>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 2 | 3 | 14 | 3 | 15
+INPUTS | 11 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<10>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>  | Inst_clk_div/disp_count<8>  | Inst_clk_div/disp_count<9>
+INPUTMC | 11 | 0 | 14 | 2 | 0 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1
+EQ | 8 | 
+   Inst_clk_div/disp_count<11>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<10> & Inst_clk_div/disp_count<1> & 
+	Inst_clk_div/disp_count<2> & Inst_clk_div/disp_count<3> & 
+	Inst_clk_div/disp_count<4> & Inst_clk_div/disp_count<5> & 
+	Inst_clk_div/disp_count<6> & Inst_clk_div/disp_count<7> & 
+	Inst_clk_div/disp_count<8> & Inst_clk_div/disp_count<9>;	// (1 pt, 11 inp)
+   Inst_clk_div/disp_count<11>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<11>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 3 | 14 | Inst_clk_div/disp_count<12>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 12 | Inst_clk_div/disp_count<0>  | Inst_clk_div/disp_count<10>  | Inst_clk_div/disp_count<1>  | Inst_clk_div/disp_count<2>  | Inst_clk_div/disp_count<3>  | Inst_clk_div/disp_count<4>  | Inst_clk_div/disp_count<5>  | Inst_clk_div/disp_count<6>  | Inst_clk_div/disp_count<7>  | Inst_clk_div/disp_count<8>  | Inst_clk_div/disp_count<9>  | Inst_clk_div/disp_count<11>
+INPUTMC | 12 | 0 | 14 | 2 | 0 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 3 | 12
+EQ | 9 | 
+   Inst_clk_div/disp_count<12>.T := Inst_clk_div/disp_count<0> & 
+	Inst_clk_div/disp_count<10> & Inst_clk_div/disp_count<1> & 
+	Inst_clk_div/disp_count<2> & Inst_clk_div/disp_count<3> & 
+	Inst_clk_div/disp_count<4> & Inst_clk_div/disp_count<5> & 
+	Inst_clk_div/disp_count<6> & Inst_clk_div/disp_count<7> & 
+	Inst_clk_div/disp_count<8> & Inst_clk_div/disp_count<9> & 
+	Inst_clk_div/disp_count<11>;	// (1 pt, 12 inp)
+   Inst_clk_div/disp_count<12>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/disp_count<12>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 10 | 13 | ANO<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>
+INPUTMC | 2 | 3 | 9 | 3 | 10
+EQ | 2 | 
+   !ANO<1> = !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 14 | ANO<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>
+INPUTMC | 2 | 3 | 9 | 3 | 10
+EQ | 2 | 
+   !ANO<2> = Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 15 | ANO<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>
+INPUTMC | 2 | 3 | 9 | 3 | 10
+EQ | 2 | 
+   !ANO<3> = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 15 | 12 | CAT<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 20 | N_PZ_466  | N_PZ_467  | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 20 | 1 | 10 | 1 | 9 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 12 | 1 | 3 | 1 | 13 | 3 | 7 | 1 | 14 | 1 | 0 | 1 | 1 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 7
+EQ | 50 | 
+   CAT<0> = N_PZ_466
+	# N_PZ_467
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2> & 
+	Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	!Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2> & 
+	Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2> & 
+	Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2> & 
+	!Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	!Inst_Timer_Block/S_ONES<3>;	// (14 pt, 20 inp)
+
+MACROCELL | 3 | 6 | Inst_Timer_Block/S_THOU<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 3 | 1 | 13 | 1 | 12 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 4 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/T0/TC_HUNS
+INPUTMC | 3 | 1 | 2 | 1 | 4 | 1 | 11
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   Inst_Timer_Block/S_THOU<0>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/T0/TC_HUNS;	// (1 pt, 4 inp)
+    Inst_Timer_Block/S_THOU<0>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_THOU<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 2 | Inst_Timer_Block/T0/TC_ONES_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 15 | 1 | 2 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5 | 1 | 4 | 3 | 7 | 1 | 0 | 1 | 1 | 1 | 14 | 1 | 11 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12
+INPUTS | 7 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | BTN<0>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 5 | 1 | 2 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 7
+INPUTP | 2 | 142 | 218
+LCT | 1 | 2 | Internal_Name
+EQ | 6 | 
+   Inst_Timer_Block/T0/TC_ONES := !BTN<1> & Inst_Timer_Block/T0/TC_ONES
+	# Inst_Timer_Block/T0/TC_ONES & !BTN<0>
+	# BTN<1> & BTN<0> & !Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (3 pt, 7 inp)
+    Inst_Timer_Block/T0/TC_ONES.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 11 | 14 | Inst_Timer_Block/S_ONES<0>_MC
+ATTRIBUTES | 2319450112 | 4
+OUTPUTMC | 12 | 1 | 8 | 3 | 11 | 1 | 7 | 1 | 2 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 0 
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   
+// Direct Input Register
+Inst_Timer_Block/S_ONES<0>.T := BTN<1>;	// (0 pt, 0 inp)
+    Inst_Timer_Block/S_ONES<0>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_ONES<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 13 | 13 | LD<3>_MC
+ATTRIBUTES | 2156167938 | 0
+OUTPUTMC | 1 | 13 | 13
+INPUTS | 15 | BTN<0>  | LD<3>  | Inst_clk_div/base_count<17>  | Inst_clk_div/base_count<19>  | Inst_clk_div/base_count<18>  | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>  | Inst_clk_div/base_count<16>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<8>
+INPUTMC | 14 | 13 | 13 | 0 | 2 | 0 | 3 | 0 | 5 | 2 | 10 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 12 | 0 | 13 | 2 | 9 | 0 | 1 | 0 | 0
+INPUTP | 1 | 218
+EQ | 23 | 
+   !LD<3> := !BTN<0> & !LD<3>
+	# BTN<0> & !Inst_clk_div/base_count<17> & 
+	!Inst_clk_div/base_count<19>
+	# BTN<0> & !Inst_clk_div/base_count<18> & 
+	!Inst_clk_div/base_count<19>
+	# BTN<0> & !Inst_clk_div/base_count<11> & 
+	!Inst_clk_div/base_count<13> & !Inst_clk_div/base_count<14> & 
+	!Inst_clk_div/base_count<15> & !Inst_clk_div/base_count<16> & 
+	!Inst_clk_div/base_count<19>
+	# BTN<0> & !Inst_clk_div/base_count<12> & 
+	!Inst_clk_div/base_count<13> & !Inst_clk_div/base_count<14> & 
+	!Inst_clk_div/base_count<15> & !Inst_clk_div/base_count<16> & 
+	!Inst_clk_div/base_count<19>
+	# BTN<0> & !Inst_clk_div/base_count<10> & 
+	!Inst_clk_div/base_count<9> & !Inst_clk_div/base_count<13> & 
+	!Inst_clk_div/base_count<14> & !Inst_clk_div/base_count<15> & 
+	!Inst_clk_div/base_count<16> & !Inst_clk_div/base_count<19>
+	# BTN<0> & !Inst_clk_div/base_count<10> & 
+	!Inst_clk_div/base_count<7> & !Inst_clk_div/base_count<8> & 
+	!Inst_clk_div/base_count<13> & !Inst_clk_div/base_count<14> & 
+	!Inst_clk_div/base_count<15> & !Inst_clk_div/base_count<16> & 
+	!Inst_clk_div/base_count<19>;	// (7 pt, 15 inp)
+   LD<3>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 10 | Inst_clk_div/base_count<11>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 10 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 11 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<9>
+INPUTMC | 11 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0 | 2 | 9
+EQ | 8 | 
+   Inst_clk_div/base_count<11>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<10> & Inst_clk_div/base_count<7> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2> & 
+	Inst_clk_div/base_count<3> & Inst_clk_div/base_count<4> & 
+	Inst_clk_div/base_count<5> & Inst_clk_div/base_count<6> & 
+	Inst_clk_div/base_count<8> & Inst_clk_div/base_count<9>;	// (1 pt, 11 inp)
+   Inst_clk_div/base_count<11>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<11>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 15 | Inst_clk_div/base_count<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 19 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 0
+EQ | 3 | 
+   !Inst_clk_div/base_count<0>.T := Gnd;	// (0 pt, 0 inp)
+   Inst_clk_div/base_count<0>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 13 | Inst_clk_div/base_count<10>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 11 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 2 | 10 | 13 | 13
+INPUTS | 11 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<9>
+INPUTMC | 11 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8 | 0 | 0 | 2 | 9
+EQ | 13 | 
+   Inst_clk_div/base_count<10>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & N_PZ_446
+	# Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<9>;	// (2 pt, 11 inp)
+   Inst_clk_div/base_count<10>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<10>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 1 | Inst_clk_div/base_count<7>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 13 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10 | 13 | 13
+INPUTS | 7 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>
+INPUTMC | 7 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4
+EQ | 6 | 
+   Inst_clk_div/base_count<7>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2> & 
+	Inst_clk_div/base_count<3> & Inst_clk_div/base_count<4> & 
+	Inst_clk_div/base_count<5> & Inst_clk_div/base_count<6>;	// (1 pt, 7 inp)
+   Inst_clk_div/base_count<7>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<7>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 10 | Inst_clk_div/base_count<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 18 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 1 | Inst_clk_div/base_count<0>
+INPUTMC | 1 | 0 | 15
+EQ | 3 | 
+   Inst_clk_div/base_count<1>.T := Inst_clk_div/base_count<0>;	// (1 pt, 1 inp)
+   Inst_clk_div/base_count<1>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 9 | Inst_clk_div/base_count<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 17 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 2 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>
+INPUTMC | 2 | 0 | 15 | 0 | 10
+EQ | 4 | 
+   Inst_clk_div/base_count<2>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1>;	// (1 pt, 2 inp)
+   Inst_clk_div/base_count<2>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 8 | Inst_clk_div/base_count<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 16 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 3 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>
+INPUTMC | 3 | 0 | 15 | 0 | 10 | 0 | 9
+EQ | 4 | 
+   Inst_clk_div/base_count<3>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2>;	// (1 pt, 3 inp)
+   Inst_clk_div/base_count<3>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 7 | Inst_clk_div/base_count<4>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 15 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 4 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>
+INPUTMC | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8
+EQ | 5 | 
+   Inst_clk_div/base_count<4>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2> & 
+	Inst_clk_div/base_count<3>;	// (1 pt, 4 inp)
+   Inst_clk_div/base_count<4>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<4>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 6 | Inst_clk_div/base_count<5>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 14 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 5 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>
+INPUTMC | 5 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 5 | 
+   Inst_clk_div/base_count<5>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2> & 
+	Inst_clk_div/base_count<3> & Inst_clk_div/base_count<4>;	// (1 pt, 5 inp)
+   Inst_clk_div/base_count<5>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<5>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 4 | Inst_clk_div/base_count<6>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 13 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10
+INPUTS | 6 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>
+INPUTMC | 6 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6
+EQ | 6 | 
+   Inst_clk_div/base_count<6>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<1> & Inst_clk_div/base_count<2> & 
+	Inst_clk_div/base_count<3> & Inst_clk_div/base_count<4> & 
+	Inst_clk_div/base_count<5>;	// (1 pt, 6 inp)
+   Inst_clk_div/base_count<6>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<6>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 0 | Inst_clk_div/base_count<8>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 13 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 0 | 13 | 2 | 10 | 13 | 13
+INPUTS | 9 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446
+INPUTMC | 9 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8
+EQ | 7 | 
+   Inst_clk_div/base_count<8>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & !N_PZ_446;	// (1 pt, 9 inp)
+   Inst_clk_div/base_count<8>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<8>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 8 | N_PZ_446_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 12 | 0 | 11 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13
+INPUTS | 12 | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>  | Inst_clk_div/base_count<16>  | Inst_clk_div/base_count<17>  | Inst_clk_div/base_count<18>  | Inst_clk_div/base_count<19>
+INPUTMC | 12 | 2 | 10 | 0 | 13 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3
+EQ | 7 | 
+   N_PZ_446 = !Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<10> & !Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & !Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & !Inst_clk_div/base_count<14> & 
+	!Inst_clk_div/base_count<15> & !Inst_clk_div/base_count<16> & 
+	!Inst_clk_div/base_count<17> & Inst_clk_div/base_count<18> & 
+	Inst_clk_div/base_count<19>;	// (1 pt, 12 inp)
+
+MACROCELL | 0 | 12 | Inst_clk_div/base_count<12>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 9 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 13 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446  | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<9>
+INPUTMC | 13 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8 | 2 | 10 | 0 | 13 | 0 | 0 | 2 | 9
+EQ | 14 | 
+   Inst_clk_div/base_count<12>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & N_PZ_446
+	# Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<9>;	// (2 pt, 13 inp)
+   Inst_clk_div/base_count<12>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<12>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 9 | Inst_clk_div/base_count<9>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 12 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 0 | 13 | 2 | 10 | 13 | 13
+INPUTS | 9 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>
+INPUTMC | 9 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0
+EQ | 7 | 
+   Inst_clk_div/base_count<9>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8>;	// (1 pt, 9 inp)
+   Inst_clk_div/base_count<9>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<9>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 11 | Inst_clk_div/base_count<13>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 8 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 14 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446  | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>
+INPUTMC | 14 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8 | 2 | 10 | 0 | 13 | 0 | 0 | 0 | 12 | 2 | 9
+EQ | 14 | 
+   Inst_clk_div/base_count<13>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & N_PZ_446
+	# Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9>;	// (2 pt, 14 inp)
+   Inst_clk_div/base_count<13>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<13>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 11 | Inst_clk_div/base_count<14>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 7 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 14 | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>
+INPUTMC | 14 | 2 | 10 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11
+EQ | 10 | 
+   Inst_clk_div/base_count<14>.T := Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13>;	// (1 pt, 14 inp)
+   Inst_clk_div/base_count<14>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<14>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 12 | Inst_clk_div/base_count<15>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 6 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 15 | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>
+INPUTMC | 15 | 2 | 10 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11
+EQ | 10 | 
+   Inst_clk_div/base_count<15>.T := Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & Inst_clk_div/base_count<14>;	// (1 pt, 15 inp)
+   Inst_clk_div/base_count<15>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<15>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 2 | 14 | Inst_clk_div/base_count<16>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 5 | 0 | 2 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 16 | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>
+INPUTMC | 16 | 2 | 10 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11 | 2 | 12
+EQ | 11 | 
+   Inst_clk_div/base_count<16>.T := Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & Inst_clk_div/base_count<14> & 
+	Inst_clk_div/base_count<15>;	// (1 pt, 16 inp)
+   Inst_clk_div/base_count<16>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<16>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 2 | Inst_clk_div/base_count<17>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 4 | 0 | 5 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 17 | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>  | Inst_clk_div/base_count<16>
+INPUTMC | 17 | 2 | 10 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14
+EQ | 11 | 
+   Inst_clk_div/base_count<17>.T := Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & Inst_clk_div/base_count<14> & 
+	Inst_clk_div/base_count<15> & Inst_clk_div/base_count<16>;	// (1 pt, 17 inp)
+   Inst_clk_div/base_count<17>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<17>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 5 | Inst_clk_div/base_count<18>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 3 | 0 | 3 | 2 | 8 | 13 | 13
+INPUTS | 19 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446  | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>  | Inst_clk_div/base_count<16>  | Inst_clk_div/base_count<17>
+INPUTMC | 19 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8 | 2 | 10 | 0 | 13 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2
+EQ | 17 | 
+   Inst_clk_div/base_count<18>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & N_PZ_446
+	# Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & Inst_clk_div/base_count<14> & 
+	Inst_clk_div/base_count<15> & Inst_clk_div/base_count<16> & 
+	Inst_clk_div/base_count<17>;	// (2 pt, 19 inp)
+   Inst_clk_div/base_count<18>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<18>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 0 | 3 | Inst_clk_div/base_count<19>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 2 | 2 | 8 | 13 | 13
+INPUTS | 20 | Inst_clk_div/base_count<0>  | Inst_clk_div/base_count<7>  | Inst_clk_div/base_count<1>  | Inst_clk_div/base_count<2>  | Inst_clk_div/base_count<3>  | Inst_clk_div/base_count<4>  | Inst_clk_div/base_count<5>  | Inst_clk_div/base_count<6>  | N_PZ_446  | Inst_clk_div/base_count<11>  | Inst_clk_div/base_count<10>  | Inst_clk_div/base_count<8>  | Inst_clk_div/base_count<12>  | Inst_clk_div/base_count<9>  | Inst_clk_div/base_count<13>  | Inst_clk_div/base_count<14>  | Inst_clk_div/base_count<15>  | Inst_clk_div/base_count<16>  | Inst_clk_div/base_count<17>  | Inst_clk_div/base_count<18>
+INPUTMC | 20 | 0 | 15 | 0 | 1 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 2 | 8 | 2 | 10 | 0 | 13 | 0 | 0 | 0 | 12 | 2 | 9 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5
+EQ | 17 | 
+   Inst_clk_div/base_count<19>.T := Inst_clk_div/base_count<0> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & N_PZ_446
+	# Inst_clk_div/base_count<11> & 
+	Inst_clk_div/base_count<0> & Inst_clk_div/base_count<10> & 
+	Inst_clk_div/base_count<7> & Inst_clk_div/base_count<1> & 
+	Inst_clk_div/base_count<2> & Inst_clk_div/base_count<3> & 
+	Inst_clk_div/base_count<4> & Inst_clk_div/base_count<5> & 
+	Inst_clk_div/base_count<6> & Inst_clk_div/base_count<8> & 
+	Inst_clk_div/base_count<12> & Inst_clk_div/base_count<9> & 
+	Inst_clk_div/base_count<13> & Inst_clk_div/base_count<14> & 
+	Inst_clk_div/base_count<15> & Inst_clk_div/base_count<16> & 
+	Inst_clk_div/base_count<17> & Inst_clk_div/base_count<18>;	// (2 pt, 20 inp)
+   Inst_clk_div/base_count<19>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+   Inst_clk_div/base_count<19>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | CLK | 4 | BTN<0>
+
+MACROCELL | 1 | 8 | Inst_Timer_Block/S_ONES<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 3 | 11 | 1 | 7 | 1 | 8 | 1 | 2 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 5 | BTN<1>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 4 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 7
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 6 | 
+   Inst_Timer_Block/S_ONES<1>.T := BTN<1> & Inst_Timer_Block/S_ONES<0>
+	$ BTN<1> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (2 pt, 5 inp)
+    Inst_Timer_Block/S_ONES<1>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_ONES<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 3 | 11 | Inst_Timer_Block/S_ONES<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 7 | 1 | 8 | 1 | 2 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 3 | BTN<1>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>
+INPUTMC | 2 | 11 | 14 | 1 | 8
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   Inst_Timer_Block/S_ONES<2>.T := BTN<1> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1>;	// (1 pt, 3 inp)
+    Inst_Timer_Block/S_ONES<2>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_ONES<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 7 | Inst_Timer_Block/S_ONES<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 7 | 1 | 8 | 1 | 2 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 5 | BTN<1>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 4 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 7
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 7 | 
+   Inst_Timer_Block/S_ONES<3>.T := BTN<1> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2>
+	# BTN<1> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (2 pt, 5 inp)
+    Inst_Timer_Block/S_ONES<3>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_ONES<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 4 | Inst_Timer_Block/T0/TC_TENS_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 10 | 1 | 4 | 3 | 7 | 1 | 0 | 1 | 1 | 1 | 14 | 1 | 11 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12
+INPUTS | 8 | BTN<1>  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/T0/TC_ONES  | BTN<0>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>
+INPUTMC | 6 | 1 | 4 | 1 | 2 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5
+INPUTP | 2 | 142 | 218
+LCT | 1 | 2 | Internal_Name
+EQ | 8 | 
+   Inst_Timer_Block/T0/TC_TENS := !BTN<1> & Inst_Timer_Block/T0/TC_TENS
+	# !Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS
+	# !BTN<0> & Inst_Timer_Block/T0/TC_TENS
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & BTN<0> & 
+	!Inst_Timer_Block/S_TENS<0> & !Inst_Timer_Block/S_TENS<1> & 
+	!Inst_Timer_Block/S_TENS<2> & Inst_Timer_Block/S_TENS<3>;	// (4 pt, 8 inp)
+    Inst_Timer_Block/T0/TC_TENS.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 8 | Inst_Timer_Block/S_TENS<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 1 | 6 | 3 | 13 | 1 | 5 | 1 | 4 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 2 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES
+INPUTMC | 1 | 1 | 2
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   Inst_Timer_Block/S_TENS<0>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES;	// (1 pt, 2 inp)
+    Inst_Timer_Block/S_TENS<0>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_TENS<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 6 | Inst_Timer_Block/S_TENS<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 3 | 13 | 1 | 5 | 1 | 6 | 1 | 4 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 6 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>
+INPUTMC | 5 | 1 | 2 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 7 | 
+   Inst_Timer_Block/S_TENS<1>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/S_TENS<0>
+	$ BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/S_TENS<0> & !Inst_Timer_Block/S_TENS<1> & 
+	!Inst_Timer_Block/S_TENS<2> & Inst_Timer_Block/S_TENS<3>;	// (2 pt, 6 inp)
+    Inst_Timer_Block/S_TENS<1>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_TENS<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 3 | 13 | Inst_Timer_Block/S_TENS<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 5 | 1 | 6 | 1 | 4 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 4 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>
+INPUTMC | 3 | 1 | 2 | 3 | 8 | 1 | 6
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   Inst_Timer_Block/S_TENS<2>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/S_TENS<0> & Inst_Timer_Block/S_TENS<1>;	// (1 pt, 4 inp)
+    Inst_Timer_Block/S_TENS<2>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_TENS<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 5 | Inst_Timer_Block/S_TENS<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 5 | 1 | 6 | 1 | 4 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 6 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>
+INPUTMC | 5 | 1 | 2 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 8 | 
+   Inst_Timer_Block/S_TENS<3>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/S_TENS<0> & Inst_Timer_Block/S_TENS<1> & 
+	Inst_Timer_Block/S_TENS<2>
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/S_TENS<0> & !Inst_Timer_Block/S_TENS<1> & 
+	!Inst_Timer_Block/S_TENS<2> & Inst_Timer_Block/S_TENS<3>;	// (2 pt, 6 inp)
+    Inst_Timer_Block/S_TENS<3>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_TENS<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 11 | Inst_Timer_Block/T0/TC_HUNS_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 5 | 1 | 11 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12
+INPUTS | 9 | BTN<1>  | Inst_Timer_Block/T0/TC_HUNS  | Inst_Timer_Block/T0/TC_ONES  | BTN<0>  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>
+INPUTMC | 7 | 1 | 11 | 1 | 2 | 1 | 4 | 3 | 7 | 1 | 14 | 1 | 0 | 1 | 1
+INPUTP | 2 | 142 | 218
+LCT | 1 | 2 | Internal_Name
+EQ | 11 | 
+   Inst_Timer_Block/T0/TC_HUNS := !BTN<1> & Inst_Timer_Block/T0/TC_HUNS
+	# !Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_HUNS
+	# !BTN<0> & Inst_Timer_Block/T0/TC_HUNS
+	# !Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & BTN<0> & 
+	Inst_Timer_Block/T0/TC_TENS & !Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>;	// (5 pt, 9 inp)
+    Inst_Timer_Block/T0/TC_HUNS.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 7 | Inst_Timer_Block/S_HUNS<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 1 | 0 | 1 | 1 | 1 | 14 | 1 | 11 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 3 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS
+INPUTMC | 2 | 1 | 2 | 1 | 4
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   Inst_Timer_Block/S_HUNS<0>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS;	// (1 pt, 3 inp)
+    Inst_Timer_Block/S_HUNS<0>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_HUNS<0>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 14 | Inst_Timer_Block/S_HUNS<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 1 | 0 | 1 | 1 | 1 | 14 | 1 | 11 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 7 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>
+INPUTMC | 6 | 1 | 2 | 1 | 4 | 3 | 7 | 1 | 14 | 1 | 0 | 1 | 1
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 11 | 
+   Inst_Timer_Block/S_HUNS<1>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1>
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<2>
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<3>;	// (3 pt, 7 inp)
+    Inst_Timer_Block/S_HUNS<1>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_HUNS<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 0 | Inst_Timer_Block/S_HUNS<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 1 | 1 | 14 | 1 | 11 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 5 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>
+INPUTMC | 4 | 1 | 2 | 1 | 4 | 3 | 7 | 1 | 14
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Inst_Timer_Block/S_HUNS<2>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1>;	// (1 pt, 5 inp)
+    Inst_Timer_Block/S_HUNS<2>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_HUNS<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 1 | Inst_Timer_Block/S_HUNS<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 1 | 1 | 14 | 1 | 11 | 1 | 9 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 7 | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>
+INPUTMC | 6 | 1 | 2 | 1 | 4 | 3 | 7 | 1 | 14 | 1 | 0 | 1 | 1
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   Inst_Timer_Block/S_HUNS<3>.T := BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2>
+	# BTN<1> & Inst_Timer_Block/T0/TC_ONES & 
+	Inst_Timer_Block/T0/TC_TENS & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>;	// (2 pt, 7 inp)
+    Inst_Timer_Block/S_HUNS<3>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_HUNS<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 12 | Inst_Timer_Block/S_THOU<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 11 | 1 | 3 | 1 | 13 | 1 | 12 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 8 | Inst_Timer_Block/S_THOU<0>  | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/T0/TC_HUNS  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>
+INPUTMC | 7 | 3 | 6 | 1 | 2 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 3 | 1 | 13
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 11 | 
+   Inst_Timer_Block/S_THOU<1>.T := Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & Inst_Timer_Block/S_THOU<1>
+	# Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & Inst_Timer_Block/S_THOU<2>
+	# Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & !Inst_Timer_Block/S_THOU<3>;	// (3 pt, 8 inp)
+    Inst_Timer_Block/S_THOU<1>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_THOU<1>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 3 | Inst_Timer_Block/S_THOU<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 10 | 1 | 13 | 1 | 12 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 6 | Inst_Timer_Block/S_THOU<0>  | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/T0/TC_HUNS  | Inst_Timer_Block/S_THOU<1>
+INPUTMC | 5 | 3 | 6 | 1 | 2 | 1 | 4 | 1 | 11 | 1 | 12
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Inst_Timer_Block/S_THOU<2>.T := Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & Inst_Timer_Block/S_THOU<1>;	// (1 pt, 6 inp)
+    Inst_Timer_Block/S_THOU<2>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_THOU<2>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 13 | Inst_Timer_Block/S_THOU<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 10 | 1 | 13 | 1 | 12 | 1 | 10 | 15 | 12 | 15 | 15 | 1 | 15 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 8 | Inst_Timer_Block/S_THOU<0>  | BTN<1>  | Inst_Timer_Block/T0/TC_ONES  | Inst_Timer_Block/T0/TC_TENS  | Inst_Timer_Block/T0/TC_HUNS  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>
+INPUTMC | 7 | 3 | 6 | 1 | 2 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 3 | 1 | 13
+INPUTP | 1 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 10 | 
+   Inst_Timer_Block/S_THOU<3>.T := Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & Inst_Timer_Block/S_THOU<1> & 
+	Inst_Timer_Block/S_THOU<2>
+	# Inst_Timer_Block/S_THOU<0> & BTN<1> & 
+	Inst_Timer_Block/T0/TC_ONES & Inst_Timer_Block/T0/TC_TENS & 
+	Inst_Timer_Block/T0/TC_HUNS & !Inst_Timer_Block/S_THOU<1> & 
+	!Inst_Timer_Block/S_THOU<2> & Inst_Timer_Block/S_THOU<3>;	// (2 pt, 8 inp)
+    Inst_Timer_Block/S_THOU<3>.CLK = LD<3>;	// CTC	(1 pt, 1 inp)
+   Inst_Timer_Block/S_THOU<3>.AR = !BTN<0>;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | BTN<0>
+
+MACROCELL | 1 | 10 | N_PZ_466_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 15 | 12 | 15 | 15 | 15 | 10 | 15 | 11
+INPUTS | 10 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 10 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 12 | 1 | 3 | 1 | 13 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 7
+EQ | 8 | 
+   N_PZ_466 = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	!Inst_Timer_Block/S_ONES<3>;	// (2 pt, 10 inp)
+
+MACROCELL | 1 | 9 | N_PZ_467_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 15 | 12 | 15 | 15 | 15 | 10 | 15 | 11
+INPUTS | 10 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>
+INPUTMC | 10 | 3 | 9 | 3 | 10 | 3 | 7 | 1 | 14 | 1 | 0 | 1 | 1 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5
+EQ | 8 | 
+   N_PZ_467 = Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2> & 
+	!Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2> & 
+	!Inst_Timer_Block/S_TENS<3>;	// (2 pt, 10 inp)
+
+MACROCELL | 15 | 15 | CAT<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 20 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_THOU<2>  | N_PZ_466  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_HUNS<2>  | N_PZ_467  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<3>  | Inst_Timer_Block/S_ONES<2>
+INPUTMC | 20 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 12 | 1 | 13 | 1 | 3 | 1 | 10 | 3 | 7 | 1 | 14 | 1 | 1 | 1 | 0 | 1 | 9 | 3 | 8 | 1 | 6 | 1 | 5 | 3 | 13 | 11 | 14 | 1 | 8 | 1 | 7 | 3 | 11
+EQ | 38 | 
+   CAT<1> = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<2> & !N_PZ_466
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<2> & !N_PZ_467
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<2> & !N_PZ_467
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<2> & !N_PZ_466
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<1> & 
+	Inst_Timer_Block/S_HUNS<2> & !Inst_Timer_Block/S_HUNS<3> & !N_PZ_467
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<1> & 
+	Inst_Timer_Block/S_TENS<2> & !Inst_Timer_Block/S_TENS<3> & !N_PZ_467
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	!Inst_Timer_Block/S_ONES<3>;	// (12 pt, 20 inp)
+
+MACROCELL | 15 | 4 | CAT<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | CAT<2>_BUFR
+INPUTMC | 1 | 1 | 15
+EQ | 1 | 
+   CAT<2> = CAT<2>_BUFR;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 15 | CAT<2>_BUFR_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 15 | 4
+INPUTS | 18 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>  | Inst_Timer_Block/S_ONES<1>
+INPUTMC | 18 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12 | 3 | 7 | 1 | 0 | 1 | 1 | 1 | 14 | 3 | 8 | 3 | 13 | 1 | 5 | 1 | 6 | 11 | 14 | 3 | 11 | 1 | 7 | 1 | 8
+EQ | 40 | 
+   CAT<2>_BUFR = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<2> & Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<1> & 
+	Inst_Timer_Block/S_THOU<2> & Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<2> & Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<1> & 
+	Inst_Timer_Block/S_HUNS<2> & Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<2> & Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<1> & 
+	Inst_Timer_Block/S_TENS<2> & Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<2> & Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<1> & 
+	Inst_Timer_Block/S_ONES<2> & Inst_Timer_Block/S_ONES<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	!Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2> & 
+	!Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	!Inst_Timer_Block/S_ONES<3>;	// (12 pt, 18 inp)
+
+MACROCELL | 15 | 10 | CAT<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 20 | N_PZ_466  | N_PZ_467  | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_ONES<3>
+INPUTMC | 20 | 1 | 10 | 1 | 9 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 12 | 1 | 3 | 3 | 7 | 1 | 14 | 1 | 0 | 3 | 8 | 1 | 6 | 3 | 13 | 11 | 14 | 1 | 8 | 3 | 11 | 1 | 13 | 1 | 1 | 1 | 5 | 1 | 7
+EQ | 42 | 
+   CAT<3> = N_PZ_466
+	# N_PZ_467
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2> & 
+	Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2> & 
+	Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (14 pt, 20 inp)
+
+MACROCELL | 15 | 11 | CAT<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 20 | N_PZ_466  | N_PZ_467  | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<3>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>
+INPUTMC | 20 | 1 | 10 | 1 | 9 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 13 | 3 | 7 | 1 | 1 | 3 | 8 | 1 | 5 | 11 | 14 | 1 | 7 | 1 | 12 | 1 | 3 | 1 | 14 | 1 | 0 | 1 | 6 | 3 | 13 | 1 | 8 | 3 | 11
+EQ | 26 | 
+   CAT<4> = N_PZ_466
+	# N_PZ_467
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<2>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<2>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<2>;	// (10 pt, 20 inp)
+
+MACROCELL | 15 | 14 | CAT<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 18 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_ONES<0>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<3>  | Inst_Timer_Block/S_ONES<2>
+INPUTMC | 18 | 3 | 9 | 3 | 10 | 3 | 6 | 1 | 12 | 1 | 13 | 1 | 3 | 3 | 7 | 1 | 14 | 1 | 1 | 1 | 0 | 3 | 8 | 1 | 6 | 1 | 5 | 3 | 13 | 11 | 14 | 1 | 8 | 1 | 7 | 3 | 11
+EQ | 52 | 
+   CAT<5> = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & !Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<2> & !Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<1> & 
+	!Inst_Timer_Block/S_THOU<2> & !Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & !Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<2> & !Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<1> & 
+	!Inst_Timer_Block/S_HUNS<2> & !Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & !Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<2> & !Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<1> & 
+	!Inst_Timer_Block/S_TENS<2> & !Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & !Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<2> & !Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<1> & 
+	!Inst_Timer_Block/S_ONES<2> & !Inst_Timer_Block/S_ONES<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2> & 
+	Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (16 pt, 18 inp)
+
+MACROCELL | 13 | 15 | CAT<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 18 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>  | Inst_Timer_Block/S_THOU<1>  | Inst_Timer_Block/S_THOU<2>  | Inst_Timer_Block/S_THOU<3>  | Inst_Timer_Block/S_HUNS<1>  | Inst_Timer_Block/S_HUNS<2>  | Inst_Timer_Block/S_HUNS<3>  | Inst_Timer_Block/S_TENS<1>  | Inst_Timer_Block/S_TENS<2>  | Inst_Timer_Block/S_TENS<3>  | Inst_Timer_Block/S_ONES<1>  | Inst_Timer_Block/S_ONES<2>  | Inst_Timer_Block/S_ONES<3>  | Inst_Timer_Block/S_THOU<0>  | Inst_Timer_Block/S_HUNS<0>  | Inst_Timer_Block/S_TENS<0>  | Inst_Timer_Block/S_ONES<0>
+INPUTMC | 18 | 3 | 9 | 3 | 10 | 1 | 12 | 1 | 3 | 1 | 13 | 1 | 14 | 1 | 0 | 1 | 1 | 1 | 6 | 3 | 13 | 1 | 5 | 1 | 8 | 3 | 11 | 1 | 7 | 3 | 6 | 3 | 7 | 3 | 8 | 11 | 14
+EQ | 44 | 
+   CAT<6> = Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<1> & 
+	!Inst_Timer_Block/S_THOU<2> & !Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<1> & 
+	!Inst_Timer_Block/S_HUNS<2> & !Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<1> & 
+	!Inst_Timer_Block/S_TENS<2> & !Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<1> & 
+	!Inst_Timer_Block/S_ONES<2> & !Inst_Timer_Block/S_ONES<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_THOU<0> & 
+	Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	!Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_THOU<0> & 
+	!Inst_Timer_Block/S_THOU<1> & Inst_Timer_Block/S_THOU<2> & 
+	Inst_Timer_Block/S_THOU<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_HUNS<0> & 
+	Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2> & 
+	!Inst_Timer_Block/S_HUNS<3>
+	# Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_HUNS<0> & 
+	!Inst_Timer_Block/S_HUNS<1> & Inst_Timer_Block/S_HUNS<2> & 
+	Inst_Timer_Block/S_HUNS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_TENS<0> & 
+	Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2> & 
+	!Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_TENS<0> & 
+	!Inst_Timer_Block/S_TENS<1> & Inst_Timer_Block/S_TENS<2> & 
+	Inst_Timer_Block/S_TENS<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & Inst_Timer_Block/S_ONES<0> & 
+	Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	!Inst_Timer_Block/S_ONES<3>
+	# !Inst_Timer_Block/S_2BIT<1> & 
+	!Inst_Timer_Block/S_2BIT<0> & !Inst_Timer_Block/S_ONES<0> & 
+	!Inst_Timer_Block/S_ONES<1> & Inst_Timer_Block/S_ONES<2> & 
+	Inst_Timer_Block/S_ONES<3>;	// (12 pt, 18 inp)
+
+MACROCELL | 15 | 5 | CAT<7>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_Timer_Block/S_2BIT<1>  | Inst_Timer_Block/S_2BIT<0>
+INPUTMC | 2 | 3 | 9 | 3 | 10
+EQ | 2 | 
+   !CAT<7> = !Inst_Timer_Block/S_2BIT<1> & 
+	Inst_Timer_Block/S_2BIT<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 13 | 3 | LD<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | SW<1>  | SW<0>
+INPUTP | 2 | 190 | 62
+EQ | 1 | 
+   !LD<0> = !SW<1> & SW<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 13 | 5 | LD<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | SW<1>  | SW<0>
+INPUTP | 2 | 190 | 62
+EQ | 1 | 
+   !LD<1> = SW<1> & !SW<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 13 | 12 | LD<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | SW<1>  | SW<0>
+INPUTP | 2 | 190 | 62
+EQ | 1 | 
+   !LD<2> = SW<1> & SW<0>;	// (1 pt, 2 inp)
+
+PIN | CLK | 16384 | 16 | LVCMOS18 | 59 | 35 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10 | 13 | 13
+PIN | BTN<0> | 65600 | 16 | LVCMOS18 | 218 | 56 | 13 | 13 | 1 | 2 | 1 | 4 | 1 | 11 | 0 | 14 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 12 | 3 | 14 | 3 | 15 | 3 | 10 | 3 | 9 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 2 | 9 | 0 | 12 | 0 | 11 | 2 | 11 | 2 | 12 | 2 | 14 | 0 | 2 | 0 | 5 | 0 | 3 | 0 | 0 | 0 | 13 | 2 | 10 | 11 | 14 | 3 | 11 | 1 | 7 | 1 | 8 | 3 | 8 | 3 | 13 | 1 | 5 | 1 | 6 | 3 | 7 | 1 | 0 | 1 | 1 | 1 | 14 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12
+PIN | BTN<1> | 64 | 16 | LVCMOS18 | 142 | 19 | 1 | 8 | 3 | 11 | 1 | 7 | 1 | 2 | 3 | 8 | 1 | 6 | 3 | 13 | 1 | 5 | 1 | 4 | 3 | 7 | 1 | 0 | 1 | 1 | 1 | 14 | 1 | 11 | 3 | 6 | 1 | 3 | 1 | 13 | 1 | 12 | 11 | 14
+PIN | SW<1> | 64 | 16 | LVCMOS18 | 190 | 3 | 13 | 3 | 13 | 5 | 13 | 12
+PIN | SW<0> | 64 | 16 | LVCMOS18 | 62 | 3 | 13 | 3 | 13 | 5 | 13 | 12
+PIN | ANO<0> | 536871040 | 0 | LVCMOS18 | 192
+PIN | ANO<1> | 536871040 | 0 | LVCMOS18 | 194
+PIN | ANO<2> | 536871040 | 0 | LVCMOS18 | 195
+PIN | ANO<3> | 536871040 | 0 | LVCMOS18 | 196
+PIN | CAT<0> | 536871040 | 0 | LVCMOS18 | 86
+PIN | CAT<1> | 536871040 | 0 | LVCMOS18 | 81
+PIN | CAT<2> | 536871040 | 0 | LVCMOS18 | 90
+PIN | CAT<3> | 536871040 | 0 | LVCMOS18 | 88
+PIN | CAT<4> | 536871040 | 0 | LVCMOS18 | 87
+PIN | CAT<5> | 536871040 | 0 | LVCMOS18 | 82
+PIN | CAT<6> | 536871040 | 0 | LVCMOS18 | 95
+PIN | CAT<7> | 536871040 | 0 | LVCMOS18 | 89
+PIN | LD<0> | 536871040 | 0 | LVCMOS18 | 107
+PIN | LD<1> | 536871040 | 0 | LVCMOS18 | 105
+PIN | LD<2> | 536871040 | 0 | LVCMOS18 | 102
+PIN | LD<3> | 536871040 | 0 | LVCMOS18 | 100

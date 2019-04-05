@@ -1,0 +1,16 @@
+AR sevensegmentdecoder behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd sub00/vhpl09 1416815276
+AR twobitcounter behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd sub00/vhpl05 1416815272
+AR clk_div behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd sub00/vhpl11 1416815278
+EN timer_block NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd sub00/vhpl12 1416815279
+AR mux_bus4to1 behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd sub00/vhpl03 1416815270
+EN twobitcounter NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd sub00/vhpl04 1416815271
+EN sevensegmentdecoder NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd sub00/vhpl08 1416815275
+EN mux_bus4to1 NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd sub00/vhpl02 1416815269
+EN anodedecoder NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd sub00/vhpl06 1416815273
+AR anodedecoder behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd sub00/vhpl07 1416815274
+AR cr_ii_demo behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd sub00/vhpl15 1416815282
+AR led4dec1hexdriver behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd sub00/vhpl01 1416815268
+EN cr_ii_demo NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd sub00/vhpl14 1416815281
+AR timer_block behavioral //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd sub00/vhpl13 1416815280
+EN clk_div NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd sub00/vhpl10 1416815277
+EN led4dec1hexdriver NULL //ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd sub00/vhpl00 1416815267

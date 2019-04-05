@@ -1,0 +1,8 @@
+vhdl work "TwoBitCounter.vhd"
+vhdl work "SevenSegmentDecoder.vhd"
+vhdl work "MUX_Bus4to1.vhd"
+vhdl work "LED4Dec1HexDriver.vhd"
+vhdl work "AnodeDecoder.vhd"
+vhdl work "Timer_Block.vhd"
+vhdl work "clk_div.vhd"
+vhdl work "CR_II_Demo.vhd"

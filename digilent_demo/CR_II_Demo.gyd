@@ -1,0 +1,67 @@
+Pin Freeze File:  version P.20131013
+
+2C256144 XC2C256-7-TQ144
+BTN<0> S:PIN143
+BTN<1> S:PIN94
+CLK S:PIN38
+SW<0> S:PIN39
+SW<1> S:PIN124
+ANO<0> S:PIN126
+ANO<1> S:PIN128
+ANO<2> S:PIN129
+ANO<3> S:PIN130
+CAT<0> S:PIN56
+CAT<1> S:PIN53
+CAT<2> S:PIN60
+CAT<3> S:PIN58
+CAT<4> S:PIN57
+CAT<5> S:PIN54
+CAT<6> S:PIN61
+CAT<7> S:PIN59
+LD<0> S:PIN69
+LD<1> S:PIN68
+LD<2> S:PIN66
+LD<3> S:PIN64
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 Inst_clk_div/base_count<8> Inst_clk_div/base_count<7> Inst_clk_div/base_count<17> Inst_clk_div/base_count<19>
+		 Inst_clk_div/base_count<6> Inst_clk_div/base_count<18> Inst_clk_div/base_count<5> Inst_clk_div/base_count<4>
+		 Inst_clk_div/base_count<3> Inst_clk_div/base_count<2> Inst_clk_div/base_count<1> Inst_clk_div/base_count<13>
+		 Inst_clk_div/base_count<12> Inst_clk_div/base_count<10> Inst_clk_div/disp_count<0> Inst_clk_div/base_count<0>
+		
+PARTITION FB2_1 Inst_Timer_Block/S_HUNS<2> Inst_Timer_Block/S_HUNS<3> Inst_Timer_Block/T0/TC_ONES Inst_Timer_Block/S_THOU<2>
+		 Inst_Timer_Block/T0/TC_TENS Inst_Timer_Block/S_TENS<3> Inst_Timer_Block/S_TENS<1> Inst_Timer_Block/S_ONES<3>
+		 Inst_Timer_Block/S_ONES<1> N_PZ_467 N_PZ_466 Inst_Timer_Block/T0/TC_HUNS
+		 Inst_Timer_Block/S_THOU<1> Inst_Timer_Block/S_THOU<3> Inst_Timer_Block/S_HUNS<1> CAT<2>_BUFR
+		
+PARTITION FB3_1 Inst_clk_div/disp_count<10> Inst_clk_div/disp_count<9> Inst_clk_div/disp_count<8> Inst_clk_div/disp_count<4>
+		 Inst_clk_div/disp_count<7> Inst_clk_div/disp_count<3> Inst_clk_div/disp_count<2> Inst_clk_div/disp_count<1>
+		 N_PZ_446 Inst_clk_div/base_count<9> Inst_clk_div/base_count<11> Inst_clk_div/base_count<14>
+		 Inst_clk_div/base_count<15> Inst_clk_div/disp_count<6> Inst_clk_div/base_count<16> Inst_clk_div/disp_count<5>
+		
+PARTITION FB4_7 Inst_Timer_Block/S_THOU<0> Inst_Timer_Block/S_HUNS<0> Inst_Timer_Block/S_TENS<0> Inst_Timer_Block/S_2BIT<1>
+		 Inst_Timer_Block/S_2BIT<0> Inst_Timer_Block/S_ONES<2> Inst_clk_div/disp_count<11> Inst_Timer_Block/S_TENS<2>
+		 Inst_clk_div/disp_count<12> s_disp
+
+
+
+
+
+
+PARTITION FB11_13 ANO<0> ANO<1> ANO<2> ANO<3>
+		
+PARTITION FB12_15 Inst_Timer_Block/S_ONES<0>
+
+
+PARTITION FB14_4 LD<0>
+PARTITION FB14_6 LD<1>
+PARTITION FB14_13 LD<2> LD<3>
+PARTITION FB14_16 CAT<6>
+
+PARTITION FB16_5 CAT<2> CAT<7>
+PARTITION FB16_11 CAT<3> CAT<4> CAT<0>
+PARTITION FB16_15 CAT<5> CAT<1>
+

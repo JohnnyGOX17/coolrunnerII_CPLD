@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CR_II_Demo</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CR_II_Demo/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/CR_II_Demo.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk_div</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/clk_div.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk_div/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/clk_div.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/clk_div.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Timer_Block</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Timer_Block/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/Timer_Block.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/AnodeDecoder</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/AnodeDecoder/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/AnodeDecoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/LED4Dec1HexDriver</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/LED4Dec1HexDriver/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/LED4Dec1HexDriver.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MUX_Bus4to1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MUX_Bus4to1/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/MUX_Bus4to1.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SevenSegmentDecoder</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SevenSegmentDecoder/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/SevenSegmentDecoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TwoBitCounter</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TwoBitCounter/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//rome/share/digilent ro/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//ro-clj-fs1/rnd/Support/CR-II_ISE_Demo/Source/TwoBitCounter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">TC_THOU</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+</messages>
+
